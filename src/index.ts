@@ -1,4 +1,4 @@
-import "dotenv/config"
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
@@ -22,9 +22,6 @@ app.use(
 app.use(morgan("dev")); // it logs all the incoming requests in terminal for debugging
 app.use(express.json()); // It is a middleware which parse all json data coming from request and serve it in req.body
 
-
-
-
 // Health check endpoint
 
 app.get("/api/health", (_req, res) => {
@@ -41,13 +38,11 @@ app.get("/", (req, res) => {
   });
 });
 
-
 // Catch-all for unknown routes
 
-app.use((_req, _res, next)=> {
-  next(new AppError("Route not found", 404))
-})
-
+app.use((_req, _res, next) => {
+  next(new AppError("Route not found", 404));
+});
 
 app.use(errorHandler);
 
