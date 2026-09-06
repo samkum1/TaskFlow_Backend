@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16", // use this node version
+    "moduleResolution": "Node16",
+    "lib": ["ES2022"],
+    "outDir": "./dist", // complied js goes to this directory
+    "rootDir": "./src", // Typescript source files lives in src
+    "strict": true, // Enables ALL strict checks — forces you to write safer code.
+    "esModuleInterop": true, // 
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true, // 
+    "declarationMap": true,
+    "sourceMap": true, // Maps complies JS back to TS for debugging
+    "paths": { // Let's you use @/model/user instead of ../../models/User
+      "@/*": ["./src/*"] 
+    }
+  },
+  "include": ["src/**/*", "eslint.config.js"],
+  "exclude": ["node_modules", "dist"]
+}
